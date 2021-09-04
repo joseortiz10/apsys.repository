@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apsys.casino.webapi", "apsys.casino.webapi\apsys.casino.webapi.csproj", "{D77B6EBF-AFFB-49CB-87C9-D7BD1396CE83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.domain", "01.domain", "{284B747B-D587-4FAE-BC6E-6F1DD95E75C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.data", "02.data", "{59D88702-1DC1-4D31-A879-9A10102A544C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.services", "03.services", "{B6FCF6B8-7D1D-431E-BCAC-791524C6804D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apsys.casino.domain", "apsys.casino.domain\apsys.casino.domain.csproj", "{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apsys.casino.webapi.testing", "apsys.casino.webapi.testing\apsys.casino.webapi.testing.csproj", "{61D1EFF6-B092-4135-A816-9071DF6D2BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apsys.casino.domain.testing", "apsys.casino.domain.testing\apsys.casino.domain.testing.csproj", "{D79533F4-DF62-4FD1-832C-D4A127274B0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D77B6EBF-AFFB-49CB-87C9-D7BD1396CE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77B6EBF-AFFB-49CB-87C9-D7BD1396CE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77B6EBF-AFFB-49CB-87C9-D7BD1396CE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77B6EBF-AFFB-49CB-87C9-D7BD1396CE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D1EFF6-B092-4135-A816-9071DF6D2BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D1EFF6-B092-4135-A816-9071DF6D2BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D1EFF6-B092-4135-A816-9071DF6D2BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D1EFF6-B092-4135-A816-9071DF6D2BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79533F4-DF62-4FD1-832C-D4A127274B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79533F4-DF62-4FD1-832C-D4A127274B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79533F4-DF62-4FD1-832C-D4A127274B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79533F4-DF62-4FD1-832C-D4A127274B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DE6FC74-E3E5-403D-8DB8-8484467A9DD7} = {284B747B-D587-4FAE-BC6E-6F1DD95E75C5}
+		{D79533F4-DF62-4FD1-832C-D4A127274B0F} = {284B747B-D587-4FAE-BC6E-6F1DD95E75C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5A5858A-D80E-4377-95DB-0DD1FFD96812}
+	EndGlobalSection
+EndGlobal
