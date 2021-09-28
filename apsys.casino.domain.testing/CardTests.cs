@@ -3,21 +3,28 @@ using NUnit.Framework;
 
 namespace apsys.casino.domain.testing
 {
-    public class CardTests
+    class CardTests : UnitaryTestsBase<Card>
     {
-        [TestCase(SuitConstant.Diamonds)]
-        [TestCase(SuitConstant.Spades)]
-        [TestCase(SuitConstant.Clubs)]
-        [TestCase(SuitConstant.Hearts)]
+
+        [SetUp]
+        public void Init()
+        {
+            ClassUnderTest = new Card();
+            ClassUnderTest.SetMockData();
+        }
+
+        //para definir el nombre de la prueba Metodo_escenario_resultadoesperado
+        [TestCase(CardConstants.Spades)]
+        [TestCase(CardConstants.Clubs)]
+        [TestCase(CardConstants.Diamonds)]
+        [TestCase(CardConstants.Hearts)]
         public void IsValid_ValidSuit_ReturnTrue(string suit)
         {
-            // Arrange
-            Card card = new Card();
-            card.SetMockData();
-            card.Suit = suit;
-            // Act
-            bool result = card.IsValid();
-            // Assert
+            //Arrange
+            ClassUnderTest.Suit = suit;
+            //Act
+            bool result = ClassUnderTest.IsValid();
+            //Assert
             Assert.IsTrue(result);
         }
 
@@ -27,13 +34,11 @@ namespace apsys.casino.domain.testing
         [TestCase("1")]
         public void IsValid_InvalidSuit_ReturnFalse(string suit)
         {
-            // Arrange
-            Card card = new Card();
-            card.SetMockData();
-            card.Suit = suit;
-            // Act
-            bool result = card.IsValid();
-            // Assert
+            //Arrange
+            ClassUnderTest.Suit = suit;
+            //Act
+            bool result = ClassUnderTest.IsValid();
+            //Assert
             Assert.IsFalse(result);
         }
 
@@ -44,20 +49,38 @@ namespace apsys.casino.domain.testing
         [TestCase("5")]
         [TestCase("6")]
         [TestCase("7")]
+        [TestCase("8")]
+        [TestCase("9")]
         [TestCase("10")]
         [TestCase("J")]
         [TestCase("Q")]
         [TestCase("K")]
         public void IsValid_ValidValue_ReturnTrue(string value)
         {
-            // Arrange
-            Card card = new Card();
-            card.SetMockData();
-            card.Value = value;
-            // Act
-            bool result = card.IsValid();
-            // Assert 
+            //Arrange
+            ClassUnderTest.Value = value;
+            //Act
+            bool result = ClassUnderTest.IsValid();
+            //Assert
             Assert.IsTrue(result);
+        }
+
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase("0")]
+        [TestCase("j")]
+        [TestCase("q")]
+        [TestCase("k")]
+        [TestCase("-")]
+        public void IsValid_InvalidValue_ReturnFalse(string value)
+        {
+            //Arrange
+            ClassUnderTest.Value = value;
+            //Act
+            bool result = ClassUnderTest.IsValid();
+            //Assert
+            Assert.IsFalse(result);
         }
     }
 }
